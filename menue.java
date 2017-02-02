@@ -19,6 +19,7 @@ public class menue{
 		final int MATHIAS_W=3;
 		final int BANANE=4;
 		final int APFEL=5;
+		final int ALEXANDER=6;
 		
 		
 		final int NAME_DER_COOLEN_TYPEN = 19032;
@@ -43,10 +44,10 @@ public class menue{
                         	case MIKE_SOUR:
                                 	System.out.println("Mike Sour");
                         	break;
-							case NAME_DER_COOLEN_TYPEN:
-								System.out.println("Klaus,Andreas,Dennis");
-							break;
-	case MATHIAS_W:
+				case NAME_DER_COOLEN_TYPEN:
+					System.out.println("Klaus,Andreas,Dennis");
+				break;
+				case MATHIAS_W:
 					System.out.println("Mathias Wittling");
 				break;
 				case BANANE:
@@ -55,6 +56,8 @@ public class menue{
 				case APFEL:
 					System.out.println("Banane hat recht!!!");
 				break;
+				case ALEXANDER:
+					System.out.prinln("Hier ist Alexander.");
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
                         	}
