@@ -12,12 +12,12 @@
 import java.util.Scanner;
 
 public class menue{
-		final int   PROGRAMMENDE    =0;
-        	final int   MICHAEL_SAUER   =1;
-            	final int   MIKE_SOUR       =2;
-            	final int   MATHIAS_W       =3;
-            	final int   BANANE          =4;
-            	final int   APFEL           =5;
+		private static final int   PROGRAMMENDE    =0;
+        	private static final int   MICHAEL_SAUER   =1;
+            	private static final int   MIKE_SOUR       =2;
+            	private static final int   MATHIAS_W       =3;
+            	private static final int   BANANE          =4;
+            	private static final int   APFEL           =5;
         public static void main(String[] args) {
         	
 		
