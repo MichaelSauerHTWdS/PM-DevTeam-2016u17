@@ -30,7 +30,7 @@ public class menue{
                                 "Mike Sour",
 				"Mathias W."};
 
-        	while(!isEnde) {
+        	while(isEnde == false) {
                 	Scanner scanner = new Scanner(System.in);
                 	int wahl = scanner.nextInt();
                 	switch (wahl) {
