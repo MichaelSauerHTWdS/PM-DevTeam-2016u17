@@ -29,9 +29,10 @@ public class menue{
                                 "Michael Sauer",
                                 "Mike Sour",
                                 "Mathias W."};
-
+		
+		Scanner scanner = new Scanner(System.in);
+		
         	while(!isEnde){
-                	Scanner scanner = new Scanner(System.in);
 			System.out.println("Geben sie eine Zahl ein:");
                 	int wahl = scanner.nextInt();
                 	switch (wahl) {
