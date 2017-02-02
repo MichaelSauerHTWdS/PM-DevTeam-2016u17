@@ -21,9 +21,9 @@ public class PersonenLager implements Iterable<Person> {
 
     public Person add(Person p) {
         if(p == null)
-            throw new Exception("Person ist null");
+            throw new RuntimeException("Person ist null");
         if(size == current)
-            throw new Exception("PersonenLager voll");
+            throw new RuntimeException("PersonenLager voll");
         personen[current++] = p;
         return p;
     }
@@ -49,7 +49,7 @@ public class PersonenLager implements Iterable<Person> {
     }
 
     public int getCurrent() {
-        return currrent;
+        return current;
     }
 
     public Person getByIndex(int i) {

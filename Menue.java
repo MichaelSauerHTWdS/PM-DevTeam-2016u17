@@ -9,9 +9,10 @@ public class Menue
   protected PersonenLager personenLager;
   protected Scanner scanner = new Scanner(System.in);
 
+  public static final int END = 0;
   public static final int NEW = 1;
-  public static final int ADDPERSON = 2;
-  public static final int REMOVEPERSON = 3;
+  public static final int ADD = 2;
+  public static final int DELETE = 3;
 
 
 
@@ -46,7 +47,7 @@ public class Menue
   }
 
   public static void main(String[] args) {
-    new ArticleDialog().start();
+    new Menue().start();
   }
 
   public PersonenLager getPersonenLager() {
@@ -56,7 +57,8 @@ public class Menue
   protected String getSelectorInfo() {
     return NEW +        ": Personenlager erstellen\n" +
            ADD +        ": Person hinzufuegen\n" +
-           DELETE +     ": Person loeschen\n";
+           DELETE +     ": Person loeschen\n" +
+           END +        ": Beenden\n";
   }
 
   /**
@@ -93,7 +95,7 @@ public class Menue
       case ADD:
         executeAdd();
         break;
-      case REMOVE:
+      case DELETE:
         executeRemove();
         break;
       case NEW:
