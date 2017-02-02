@@ -40,6 +40,7 @@ public class menue{
                         	break;
 			        case MATHIAS_W
 					System.out.println("Mathias Wittling");
+				break;
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
                         	}
