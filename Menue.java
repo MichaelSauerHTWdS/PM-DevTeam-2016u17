@@ -57,8 +57,7 @@ public class Menue
   protected String getSelectorInfo() {
     return NEW +        ": Personenlager erstellen\n" +
            ADD +        ": Person hinzufuegen\n" +
-           DELETE +     ": Person loeschen\n" +
-           END +        ": Beenden\n";
+           DELETE +     ": Person loeschen\n";
   }
 
   /**
