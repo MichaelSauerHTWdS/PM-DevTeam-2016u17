@@ -19,6 +19,9 @@ public class menue{
 		final int MATHIAS_W=3;
 		final int BANENE=4;
 		final int APFEL=5;
+		
+		
+		final int NAME_DER_COOLEN_TYPEN = 19032;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
@@ -40,7 +43,10 @@ public class menue{
                         	case MIKE_SOUR:
                                 	System.out.println("Mike Sour");
                         	break;
-				case MATHIAS_W:
+							case NAME_DER_COOLEN_TYPEN:
+								System.out.println("Klaus,Andreas,Dennis");
+							break;
+	case MATHIAS_W:
 					System.out.println("Mathias Wittling");
 				break;
 				case BANANE:
