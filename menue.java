@@ -19,7 +19,7 @@ public class menue{
 		final int MATHIAS_W=3;
 		final int BANANE=4;
 		final int APFEL=5;
-		
+		final int Mon_Bou = 1199;
 		
 		final int NAME_DER_COOLEN_TYPEN = 19032;
         	boolean isEnde=false;
@@ -49,6 +49,9 @@ public class menue{
 	case MATHIAS_W:
 					System.out.println("Mathias Wittling");
 				break;
+				case Mon_Bou:
+                                	System.out.println("Obstkorb");
+                        	break;
 				case BANANE:
 					System.out.println("Mac ist zu umständlich!");
 				break;
