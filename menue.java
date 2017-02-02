@@ -15,7 +15,7 @@ public class menue{
         public static void main(String[] args) {
         	final int PROGRAMMENDE=0;
         	final int MICHAEL_SAUER=1;
-		final int MIKE_SOUR=2;
+		    final int MIKE_SOUR=2;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
