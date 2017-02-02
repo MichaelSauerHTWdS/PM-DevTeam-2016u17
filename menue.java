@@ -19,7 +19,7 @@ public class menue{
 		final int MATHIAS_W=3;
 		final int BANANE=4;
 		final int APFEL=5;
-		final int Alexander=6;
+		final int ALEXANDER=6;
 		
 		
 		final int NAME_DER_COOLEN_TYPEN = 19032;
