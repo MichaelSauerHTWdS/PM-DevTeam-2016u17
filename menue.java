@@ -18,6 +18,7 @@ public class menue{
 		final int MIKE_SOUR=2;
 		final int MATHIAS_W=3;
 		final int DANIEL_H=10;
+		final int RUSSE=1337;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
@@ -46,6 +47,10 @@ public class menue{
 				break;
                                 case DANIEL_H
                                         System.out.println("Daniel Helfgen");
+				
+				case RUSSE:
+					System.out.println("Mememaster hier");
+				break;
 
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
