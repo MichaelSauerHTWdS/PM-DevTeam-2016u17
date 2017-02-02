@@ -6,7 +6,7 @@
  * Datum:     03.01.2014
  * Datum:     28.11.2014 //fuer Veraenderung zu demonstrieren
  * Compile:   javac menue.java
- * Execute:   java menu
+ * Execute:   java menue
  */
 
 import java.util.Scanner;
