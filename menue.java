@@ -17,6 +17,7 @@ public class menue{
         	final int MICHAEL_SAUER=1;
 		final int MIKE_SOUR=2;
 		final int MATHIAS_W=3;
+		final int BANENE=4;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
@@ -38,8 +39,11 @@ public class menue{
                         	case MIKE_SOUR:
                                 	System.out.println("Mike Sour");
                         	break;
-			        case MATHIAS_W
+				case MATHIAS_W:
 					System.out.println("Mathias Wittling");
+				break;
+				case BANANE:
+					System.out.println("Mac ist zu umständlich!");
 				break;
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
