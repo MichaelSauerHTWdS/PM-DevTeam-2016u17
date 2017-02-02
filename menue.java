@@ -46,8 +46,8 @@ public class menue{
 							case NAME_DER_COOLEN_TYPEN:
 								System.out.println("Klaus,Andreas,Dennis");
 							break;
-	case MATHIAS_W:
-					System.out.println("Mathias Wittling");
+				case MATHIAS_W:
+					System.out.println("How about no?");
 				break;
 				case BANANE:
 					System.out.println("Mac ist zu umständlich!");
