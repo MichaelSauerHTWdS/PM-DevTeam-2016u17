@@ -19,7 +19,7 @@ public class menue{
         final int MICHAEL_SAUER = 1;
 		final int MIKE_SOUR = 2;
 		final int MATHIAS_W = 3;
-		final int BJOERN_S = 4
+		final int BJOERN_S = 4;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
