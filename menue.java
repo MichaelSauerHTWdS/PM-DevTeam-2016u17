@@ -30,7 +30,7 @@ public class menue{
                                 "Mike Sour",
 				"Mathias W."};
 
-        	while(!isEnde){
+        	while(!isEnde) {
                 	Scanner scanner = new Scanner(System.in);
                 	int wahl = scanner.nextInt();
                 	switch (wahl) {
@@ -60,8 +60,8 @@ public class menue{
 					System.out.prinln("Hier ist Alexander.");
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
-                        	}
-                	}
-        	}
-	}
+                        }
+                }
+        }
+}
 
