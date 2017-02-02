@@ -42,11 +42,11 @@ public class menue{
                         	break;
 					
                         	case MICHAEL_SAUER:
-                                	System.out.println("Michael Sauer");
+                                	System.out.println(textfeld[1]);
                         	break;
 					
                         	case MIKE_SOUR:
-                                	System.out.println("Mike Sour");
+                                	System.out.println(textfeld[2]);
                         	break;
 					
 				case NAME_DER_COOLEN_TYPEN:
