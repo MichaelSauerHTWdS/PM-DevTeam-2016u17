@@ -17,12 +17,14 @@ public class menue{
         	final int MICHAEL_SAUER=1;
 		final int MIKE_SOUR=2;
 		final int MATHIAS_W=3;
+		final int DANIEL_H=10;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
                                 "Michael Sauer",
                                 "Mike Sour",
-				"Mathias W."};
+				"Mathias W."
+				"Daniel H."};
 
         	while(!isEnde){
                 	Scanner scanner = new Scanner(System.in);
@@ -40,6 +42,11 @@ public class menue{
                         	break;
 			        case MATHIAS_W
 					System.out.println("Mathias Wittling");
+
+				break;
+                                case DANIEL_H
+                                        System.out.println("Daniel Helfgen");
+
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
                         	}
