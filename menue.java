@@ -1,7 +1,7 @@
 /*
  * Dieses kleine Java-Programm erzeugt ein sehr einfaches
  * Konsolen-Menü und dient dazu die Arbeitsweise eines RCS
- * zu erklären.
+ * zu erklären
  * Autor(en): Michael Sauer
  * Datum:     03.01.2014
  * Datum:     28.11.2014 //fuer Veraenderung zu demonstrieren
@@ -17,11 +17,13 @@ public class menue{
         	final int MICHAEL_SAUER=1;
 		final int MIKE_SOUR=2;
 		final int MATHIAS_W=3;
+                final int SMITTY=4;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
                                 "Michael Sauer",
                                 "Mike Sour",
+				"SMITTY",
 				"Mathias W."};
 
         	while(!isEnde){
@@ -38,8 +40,11 @@ public class menue{
                         	case MIKE_SOUR:
                                 	System.out.println("Mike Sour");
                         	break;
-			        case MATHIAS_W
-					System.out.println("Mathias Wittling");
+			        case MATHIAS_W:
+	System.out.println("Mathias Wittling");
+				break;
+				case SMITTY:
+					System.out.println("SMITTYWERBEN");
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
                         	}
