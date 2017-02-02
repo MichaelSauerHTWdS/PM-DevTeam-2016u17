@@ -8,7 +8,7 @@
  * Compile:   javac menue.java
  * Execute:   java menu
  */
-
+// Hi
 import java.util.Scanner;
 
 public class menue{
