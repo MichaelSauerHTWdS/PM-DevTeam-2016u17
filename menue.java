@@ -31,7 +31,7 @@ public class menue{
 
         	while(!isEnde){
                 	Scanner scanner = new Scanner(System.in);
-			System.out.println(Bitte geben sie eine Zahl ein");
+			System.out.println("Bitte geben sie eine Zahl ein");
                 	int wahl = scanner.nextInt();
                 	switch (wahl) {
                         	case PROGRAMMENDE:
