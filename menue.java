@@ -13,10 +13,13 @@ import java.util.Scanner;
 
 public class menue{
         public static void main(String[] args) {
-        	final int PROGRAMMENDE=0;
-        	final int MICHAEL_SAUER=1;
-		final int MIKE_SOUR=2;
-		final int MATHIAS_W=3;
+			
+			
+        final int PROGRAMMENDE = 0;
+        final int MICHAEL_SAUER = 1;
+		final int MIKE_SOUR = 2;
+		final int MATHIAS_W = 3;
+		final int BJOERN_S = 4
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
@@ -38,8 +41,12 @@ public class menue{
                         	case MIKE_SOUR:
                                 	System.out.println("Mike Sour");
                         	break;
-			        case MATHIAS_W
-					System.out.println("Mathias Wittling");
+							case MATHIAS_W:
+									System.out.println("Mathias Wittling");
+							break;
+							case BJOERN_S:
+									System.out.println("Björn Schmidt");
+							break;
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
                         	}
