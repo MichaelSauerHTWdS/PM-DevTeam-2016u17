@@ -28,7 +28,7 @@ public class menue{
                                 "Michael Sauer",
                                 "Mike Sour",
 				"Mathias W."};
-
+		System.out.println("Nur um eine Änderung vorzunehmen!");
         	while(!isEnde){
                 	Scanner scanner = new Scanner(System.in);
                 	int wahl = scanner.nextInt();
