@@ -57,7 +57,7 @@ public class menue{
 					System.out.println("Banane hat recht!!!");
 				break;
 				case ALEXANDER:
-					System.out.prinln("Hier ist Alexander.");
+					System.out.println("Hier ist Alexander.");
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
                         	}
