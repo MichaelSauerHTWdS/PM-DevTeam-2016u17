@@ -1,3 +1,5 @@
+package PM-DevTeam-2016u17;
+
 /*
  * Dieses kleine Java-Programm erzeugt ein sehr einfaches
  * Konsolen-Menü und dient dazu die Arbeitsweise eines RCS
@@ -17,7 +19,7 @@ public class menue{
         	final int MICHAEL_SAUER=1;
 		final int MIKE_SOUR=2;
 		final int MATHIAS_W=3;
-		final int BANENE=4;
+		final int BANANE=4;
 		final int APFEL=5;
         	boolean isEnde=false;
 
