@@ -12,6 +12,11 @@
 import java.util.Scanner;
 
 public class menue{
+	private static final String NAME_1 = "Michael Sauer";
+	private static final String NAME_2 = "Mike Sour";  
+	private static final String NAME_3 = "Mathias Wittling";
+	private static final String MSG_FEHLER = "Fehler: Kenne ich nicht!";
+
         public static void main(String[] args) {
         	final int PROGRAMMENDE=0;
         	final int MICHAEL_SAUER=1;
@@ -33,16 +38,16 @@ public class menue{
                                 	isEnde=true;
                         	break;
                         	case MICHAEL_SAUER:
-                                	System.out.println("Michael Sauer");
+                                	System.out.println(NAME_1);
                         	break;
                         	case MIKE_SOUR:
-                                	System.out.println("Mike Sour");
+                                	System.out.println(NAME_2);
                         	break;
-			        case MATHIAS_W
-					System.out.println("Mathias Wittling");
+			        case MATHIAS_W:
+					System.out.println(NAME_3);
 				break;
                         	default:
-                                	System.out.println("Fehler: Kenne ich nicht!");
+                                	System.out.println(MSG_FEHLER);
                         	}
                 	}
         	}
