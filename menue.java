@@ -19,6 +19,7 @@ public class menue{
 		final int MATHIAS_W=3;
 		final int BANANE=4;
 		final int APFEL=5;
+		final int BIRNE=6;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
@@ -49,6 +50,8 @@ public class menue{
 				case APFEL:
 					System.out.println("Banane hat recht!!!");
 				break;
+				case BIRNE:
+					System.out.println("Ich bin eine Birne.");
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
                         	}
