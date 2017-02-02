@@ -12,7 +12,17 @@
 import java.util.Scanner;
 
 public class menue{
-        public static void main(String[] args) {
+
+    public static void menu(){
+        System.out.println("Wähle einen Menuepunkt aus");
+        System.out.println("[1] Michael Sauer ");
+        System.out.println("[2] Mike Sour");
+        System.out.println("[0] Ciao");
+        
+    }
+    
+    
+    public static void main(String[] args) {
         	final int PROGRAMMENDE=0;
         	final int MICHAEL_SAUER=1;
 		final int MIKE_SOUR=2;
@@ -22,10 +32,13 @@ public class menue{
                                 "Michael Sauer",
                                 "Mike Sour"};
 
+                
+                menu();
         	while(!isEnde){
                 	Scanner scanner = new Scanner(System.in);
                 	int wahl = scanner.nextInt();
-                	switch (wahl) {
+                	menu();
+                        switch (wahl) {
                         	case PROGRAMMENDE:
                                 	System.out.println(textfeld[0]);
                                 	isEnde=true;
