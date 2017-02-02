@@ -1,45 +1,110 @@
-/*
- * Dieses kleine Java-Programm erzeugt ein sehr einfaches
- * Konsolen-Menü und dient dazu die Arbeitsweise eines RCS
- * zu erklären.
- * Autor(en): Michael Sauer
- * Datum:     03.01.2014
- * Datum:     28.11.2014 //fuer Veraenderung zu demonstrieren
- * Compile:   javac menue.java
- * Execute:   java menu
- */
-
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
-public class menue{
-        public static void main(String[] args) {
-        	final int PROGRAMMENDE=0;
-        	final int MICHAEL_SAUER=1;
-		final int MIKE_SOUR=2;
-        	boolean isEnde=false;
+/**
+ * Einfache Menü-class
+ */
+public class Menue
+{
+  protected PersonenLager personenLager;
+  protected Scanner scanner = new Scanner(System.in);
 
-        	String[] textfeld={"Ciao",
-                                "Michael Sauer",
-                                "Mike Sour"};
+  public static final int NEW = 1;
+  public static final int ADDPERSON = 2;
+  public static final int REMOVEPERSON = 3;
 
-        	while(!isEnde){
-                	Scanner scanner = new Scanner(System.in);
-                	int wahl = scanner.nextInt();
-                	switch (wahl) {
-                        	case PROGRAMMENDE:
-                                	System.out.println(textfeld[0]);
-                                	isEnde=true;
-                        	break;
-                        	case MICHAEL_SAUER:
-                                	System.out.println("Michael Sauer");
-                        	break;
-                        	case MIKE_SOUR:
-                                	System.out.println("Mike Sour");
-                        	break;
-                        	default:
-                                	System.out.println("Fehler: Kenne ich nicht!");
-                        	}
-                	}
-        	}
-	}
 
+
+  /**
+   * Standard-Konstruktor
+   */
+  Menue() {
+    personenLager = null;
+    scanner.useDelimiter("\n");
+  }
+
+
+  /**
+   * Start input loop
+   */
+  public void start() {
+    int selector = -1;
+    do {
+      try {
+        selector = getSelector();
+        execute(selector);
+      } catch (IllegalArgumentException e) {
+        System.out.print("Fehler: " + e + "\n");
+      } catch (InputMismatchException e) {
+        scanner.next();
+        System.out.print("Fehler: " + e + "\n");
+      } catch (Exception e) {
+        System.out.print("Fehler: " + e + "\n");
+        e.printStackTrace(System.out);
+      }
+    } while (selector != END);
+  }
+
+  public static void main(String[] args) {
+    new ArticleDialog().start();
+  }
+
+  public PersonenLager getPersonenLager() {
+    return personenLager;
+  }
+
+  protected String getSelectorInfo() {
+    return NEW +        ": Personenlager erstellen\n" +
+           ADD +        ": Person hinzufuegen\n" +
+           DELETE +     ": Person loeschen\n"
+  }
+
+  /**
+   * Display help text
+   */
+  private int getSelector() {
+    System.out.print(  getSelectorInfo() +
+                       END +          ": beenden\n" +
+                       "-> ");
+    if (!scanner.hasNextInt()) throw new InputMismatchException("Expected Int value");
+    return scanner.nextInt();
+  }
+
+
+  protected void executeRemove() {
+
+  }
+
+  protected void executeAdd() {
+
+  }
+
+  protected void executeNew() {
+
+  }
+
+  /**
+   * Interact with article based on user input
+   *
+   * @param selector Operation to execute
+   */
+  public boolean execute(int selector) {
+    switch (selector) {
+      case ADD:
+        executeAdd();
+        break;
+      case REMOVE:
+        executeRemove();
+        break;
+      case NEW:
+        executeNew();
+      case END:
+        break;
+    }
+    if (selector <= 7) {
+      System.out.print("\n");
+      return true;
+    }
+    return false;
+  }
+}
