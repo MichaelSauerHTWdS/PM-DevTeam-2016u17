@@ -17,7 +17,7 @@ public class menue{
         	final int MICHAEL_SAUER=1;
 		final int MIKE_SOUR=2;
 		final int MATHIAS_W=3;
-		final int BANENE=4;
+		final int BANANE=4;
 		final int APFEL=5;
         	boolean isEnde=false;
 
