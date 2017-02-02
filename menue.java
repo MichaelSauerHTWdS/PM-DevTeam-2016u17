@@ -15,10 +15,13 @@ public class menue{
         public static void main(String[] args) {
         	final int PROGRAMMENDE=0;
         	final int MICHAEL_SAUER=1;
-		final int MIKE_SOUR=2;
-		final int MATHIAS_W=3;
-		final int BANENE=4;
-		final int DITCH_JONES=5;
+		      final int MIKE_SOUR=2;
+	      	final int MATHIAS_W=3;
+	      	final int BANENE=4;
+      		final int BANANE=4;
+      		final int APFEL=5;
+      		final int BIRNE=6;
+          final int DITCH_JONES=7;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
@@ -40,16 +43,24 @@ public class menue{
                         	case MIKE_SOUR:
                                 	System.out.println("Mike Sour");
                         	break;
-				case MATHIAS_W:
-					System.out.println("Mathias Wittling");
-				break;
-				case BANANE:
-					System.out.println("Mac ist zu umständlich!");
-				break;
-				
-				case DITCH_JONES:
-					System.out.pritnln("This is Ditch Jones");
-				break;
+				                  case MATHIAS_W:
+					                         System.out.println("Mathias Wittling");
+			                  	break;
+				                  case BANANE:
+					                         System.out.println("Mac ist zu umständlich!");
+				                  break;
+                      
+				                  case DITCH_JONES:
+					                        System.out.pritnln("This is Ditch Jones");
+			                  	break;
+
+				                  case APFEL:
+				                    	System.out.println("Banane hat recht!!!");
+			                  	break;
+				                  case BIRNE:
+					                    System.out.println("Ich bin eine Birne.");
+                          break;
+
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
                         	}
