@@ -1,77 +1,123 @@
-/*
- * Dieses kleine Java-Programm erzeugt ein sehr einfaches
- * Konsolen-Menü und dient dazu die Arbeitsweise eines RCS
- * zu erklären.
- * Autor(en): Michael Sauer
- * Datum:     03.01.2014
- * Datum:     28.11.2014 //fuer Veraenderung zu demonstrieren
- * Compile:   javac menue.java
- * Execute:   java menue
- */
-
 import java.util.Scanner;
+import java.io.*;
 
-public class menue{
-		private static final int   PROGRAMMENDE    =0;
-        	private static final int   MICHAEL_SAUER   =1;
-            	private static final int   MIKE_SOUR       =2;
-            	private static final int   MATHIAS_W       =3;
-            	private static final int   BANANE          =4;
-            	private static final int   APFEL           =5;
-        public static void main(String[] args) {
-        	
-		
-		
-		final int NAME_DER_COOLEN_TYPEN = 19032;
-        	boolean isEnde=false;
-
-        	String[] textfeld={"Ciao",
-                                "Michael Sauer",
-                                "Mike Sour",
-                                "Mathias W."};
-		
-		Scanner scanner = new Scanner(System.in);
-		
-        	while(!isEnde){
-			System.out.println("Geben sie eine Zahl ein:");
-                	int wahl = scanner.nextInt();
-                	switch (wahl) {
-                        	case PROGRAMMENDE:
-                                	System.out.println(textfeld[0]);
-                                	isEnde=true;
-                        	break;
-					
-                        	case MICHAEL_SAUER:
-                                	System.out.println("Michael Sauer");
-                        	break;
-					
-                        	case MIKE_SOUR:
-                                	System.out.println("Mike Sour");
-                        	break;
-					
-				case NAME_DER_COOLEN_TYPEN:
-					System.out.println("Klaus,Andreas,Dennis");
-				break;
-                            
-                            	case MATHIAS_W:
-                	                System.out.println("Mathias Wittling");
-				break;
-                            
-				case BANANE:
-					System.out.println("Mac ist zu umständlich!");
-                            
-				break;
-                            
-				case APFEL:
-					System.out.println("Banane hat recht!!!");
-                            
-				break;
-                        	default:
-                                	System.out.println("Fehler: Kenne ich nicht!");
-                            
-                            break;
-                        	}
-                	}
-        	}
-	}
-
+public class ETreeDialog
+{
+    //variables
+    private Scanner input = null;
+    private ETree tree = null;
+    
+    public ETreeDialog()
+    {
+        input = new Scanner( System.in );
+    }
+    
+    public void start()
+    {
+        System.out.println( "Please enter a filename: " );
+        String filename = input.next();
+        
+        start( filename );
+    }
+    
+    public void start( String filename )
+    {
+        readFromFile( filename );   
+    }
+    
+    private void readFromFile( String filename )
+    {      
+        File tempFile = null;
+        
+        try
+        {
+            //exceptions
+            tempFile = new File( filename );
+            
+            if ( !tempFile.exists() )
+            {
+                throw new FileDoesNotExistException( "File '" + filename + "' doesn't exist." );
+            }
+                  
+            if ( tempFile.getName().lastIndexOf( "." ) != -1 && tempFile.getName().lastIndexOf( "." ) != 0 )
+            {
+                throw new FileHasExtensionException( "File '" + filename + "' has an extension, which is not allowed." );
+            }
+            
+            if ( !tempFile.canRead() )
+            {
+                throw new FileNotReadableException( "You have no permission to read file '" + filename + "'." );
+            }
+            
+            //main code
+            ETreeParser parser = new ETreeParser( filename );
+            tree = parser.getTree();
+            
+            System.out.println( ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" );
+            
+            if ( tree != null && tree.isBuild() )
+            {
+                System.out.println( "Formular = " + tree.getInfixFormular() );
+                System.out.println();
+                System.out.println( "Key/Value pairs:" );
+                
+                for ( int i = 0; i < tree.getNumVariables(); i++ )
+                {
+                    System.out.println( "\t" + tree.getVariables()[i] + " = " + tree.getValues()[i] );
+                }
+                System.out.println();
+                System.out.println( "Result = " + tree.getResult() );
+                System.out.println();
+                System.out.println( "InOrder of last Tree: " + tree.toString() );
+            }
+            else
+            {
+                System.out.println( "Tree wasn't build completely." );
+            }
+            
+            System.out.println( ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" );
+        }
+        catch( FileDoesNotExistException e )
+        {
+            System.out.println( e );
+            e.printStackTrace();
+        }
+        catch( FileHasExtensionException e )
+        {
+            System.out.println( e );
+            e.printStackTrace();
+        }
+        catch( FileNotReadableException e )
+        {
+            System.out.println( e );
+            e.printStackTrace();
+        }
+        catch( IllegalArgumentException e )
+        {
+            System.out.println( e );
+            e.printStackTrace();
+        }
+        catch( RuntimeException e )
+        {
+            System.out.println( e );
+            e.printStackTrace();
+        }
+        catch( Exception e )
+        {
+            System.out.println( e );
+            e.printStackTrace();
+        }
+    }
+    
+    public static void main( String[] args )
+    {
+        if ( args.length == 0 )
+        {
+            new ETreeDialog().start();
+        }
+        else
+        {
+            new ETreeDialog().start( args[0] );
+        }
+    }
+}
