@@ -12,16 +12,16 @@
 import java.util.Scanner;
 
 public class menue{
-		private static final int   PROGRAMMENDE    =0;
-        	private static final int   MICHAEL_SAUER   =1;
-            	private static final int   MIKE_SOUR       =2;
-            	private static final int   MATHIAS_W       =3;
+	
+private static final int   PROGRAMMENDE    =0;
+private static final int   MICHAEL_SAUER   =1;
+private static final int   MIKE_SOUR       =2;
+private static final int   MATHIAS_W       =3;
             	private static final int   BANANE          =4;
             	private static final int   APFEL           =5;
+	
         public static void main(String[] args) {
-        	
-		
-		
+        		
 		final int NAME_DER_COOLEN_TYPEN = 19032;
         	boolean isEnde=false;
 
