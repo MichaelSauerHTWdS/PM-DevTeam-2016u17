@@ -1,0 +1,13 @@
+AAAA
+VarB
+xx12A
+
+AAAA + VarB * xx12A
+
+AAAA = 1.0
+VarB = 2.0
+xx12A = 3.0
+
+AAAA = 27.27
+VarB = 28.425
+xx12A = 26.4
