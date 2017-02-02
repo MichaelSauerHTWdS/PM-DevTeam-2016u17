@@ -13,34 +13,33 @@ import java.util.Scanner;
 
 public class menue{
         public static void main(String[] args) {
-            final int PROGRAMMENDE=0;
-            final int MICHAEL_SAUER =1;
-            final int MIKE_SOUR=2;
-            boolean isEnde=false;
+        	final int PROGRAMMENDE=0;
+        	final int MICHAEL_SAUER=1;
+		final int MIKE_SOUR=2;
+        	boolean isEnde=false;
 
-            String[] textfeld={"Ciao",
+        	String[] textfeld={"Ciao",
                                 "Michael Sauer",
                                 "Mike Sour"};
 
-            while(!isEnde){
-                    System.out.println("Test");
-                    Scanner scanner = new Scanner(System.in);
-                    int wahl = scanner.nextInt();
-                    switch (wahl) {
-                            case PROGRAMMENDE:
-                                    System.out.println(textfeld[0]);
-                                    isEnde=true;
-                            break;
-                            case MICHAEL_SAUER:
-                                    System.out.println(textfeld[1]);
-                            break;
-                            case MIKE_SOUR:
-                                    System.out.println(textfeld[2]);
-                            break;
-                            default:
-                                    System.out.println("Fehler: Kenne ich nicht!");
-                            }
-                    }
-            }
-    }
+        	while(!isEnde){
+                	Scanner scanner = new Scanner(System.in);
+                	int wahl = scanner.nextInt();
+                	switch (wahl) {
+                        	case PROGRAMMENDE:
+                                	System.out.println(textfeld[0]);
+                                	isEnde=true;
+                        	break;
+                        	case MICHAEL_SAUER:
+                                	System.out.println("Michael Sauer");
+                        	break;
+                        	case MIKE_SOUR:
+                                	System.out.println("Mike Sour");
+                        	break;
+                        	default:
+                                	System.out.println("Fehler: Kenne ich nicht!");
+                        	}
+                	}
+        	}
+	}
 
