@@ -20,6 +20,7 @@ public class menue{
 		final int BANANE=4;
 		final int APFEL=5;
 		final int ALEXANDER=6;
+		final int DITCH_JONES=7;
 		
 		
 		final int NAME_DER_COOLEN_TYPEN = 19032;
@@ -57,7 +58,11 @@ public class menue{
 					System.out.println("Banane hat recht!!!");
 				break;
 				case ALEXANDER:
-					System.out.prinln("Hier ist Alexander.");
+					System.out.println("Hier ist Alexander.");
+				break;
+				case DITCH_JONES:
+					System.out.println("This is Ditch Jones);
+				break;
                         	default:
                                 	System.out.println("Fehler: Kenne ich nicht!");
                         }
