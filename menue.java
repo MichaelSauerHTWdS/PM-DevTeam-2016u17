@@ -21,7 +21,7 @@ public class menue{
       		final int BANANE=4;
       		final int APFEL=5;
       		final int BIRNE=6;
-          final int DITCH_JONES=7;
+          	final int DITCH_JONES=7;
         	boolean isEnde=false;
 
         	String[] textfeld={"Ciao",
