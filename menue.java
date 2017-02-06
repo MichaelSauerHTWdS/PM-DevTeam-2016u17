@@ -1,13 +1,13 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class ETreeDialog
+public class menue
 {
     //variables
     private Scanner input = null;
     private ETree tree = null;
     
-    public ETreeDialog()
+    public menue()
     {
         input = new Scanner( System.in );
     }
@@ -113,11 +113,11 @@ public class ETreeDialog
     {
         if ( args.length == 0 )
         {
-            new ETreeDialog().start();
+            new menue().start();
         }
         else
         {
-            new ETreeDialog().start( args[0] );
+            new menue().start( args[0] );
         }
     }
 }
